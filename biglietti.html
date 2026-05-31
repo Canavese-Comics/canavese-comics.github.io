@@ -433,7 +433,11 @@
 
       <details>
         <summary>Ho problemi con il pagamento, cosa faccio?</summary>
+<<<<<<< HEAD
         <p>Puoi usare il pulsante <a href="#ticket-checkout-direct">"Apri il checkout direttamente su Eventbrite"</a> per completare l'acquisto direttamente sulla piattaforma.</p>
+=======
+        <p>Puoi usare il pulsante <a href="#ticket-checkout-direct">“Apri il checkout direttamente su Eventbrite”</a> per completare l'acquisto direttamente sulla piattaforma.</p>
+>>>>>>> 3d95945 (add meta pixel)
       </details>
 
       <details>
@@ -673,14 +677,25 @@
         }
 
         window.EBWidgets.createWidget({
+<<<<<<< HEAD
 
+=======
+            // Required
+>>>>>>> 3d95945 (add meta pixel)
             widgetType: 'checkout',
             eventId: '1989163261863',
             iframeContainerId: 'eventbrite-widget-container-1989163261863',
 
+<<<<<<< HEAD
             iframeContainerHeight: 625,  
 
             onOrderComplete: exampleCallback 
+=======
+            // Optional
+            iframeContainerHeight: 625,  // Widget height in pixels. Defaults to a minimum of 625px if not provided
+
+            onOrderComplete: exampleCallback  // Method called when an order has successfully completed
+>>>>>>> 3d95945 (add meta pixel)
         });
 
         window.setTimeout(hideLoader, checkoutLoaderDelay);
