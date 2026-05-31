@@ -251,6 +251,39 @@ if (mapButton) {
   });
 }
 
+// Tracking
+(() => {
+  const trackMetaEvent = (eventName) => {
+    if (typeof fbq === "function") {
+      fbq("track", eventName);
+    }
+  };
+
+  const directCheckoutLink = document.getElementById("ticket-checkout-direct");
+
+  if (directCheckoutLink) {
+    directCheckoutLink.addEventListener("click", () => {
+      trackMetaEvent("InitiateCheckout");
+    });
+  }
+
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest("a[href]");
+    if (!link) return;
+
+    const href = link.getAttribute("href") || "";
+    const normalizedHref = href.toLowerCase();
+    const isMailLink = normalizedHref.startsWith("mailto:");
+    const isSocialLink =
+      normalizedHref.includes("instagram.com") ||
+      normalizedHref.includes("facebook.com");
+
+    if (isMailLink || isSocialLink) {
+      trackMetaEvent("Contact");
+    }
+  });
+})();
+
 // Final animated navbar underline between pages
 (() => {
   const nav = document.querySelector(".desktop-nav");

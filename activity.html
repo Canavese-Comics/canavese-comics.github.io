@@ -7,10 +7,29 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    if (typeof gtag === 'function') {
+      gtag('js', new Date());
 
-    gtag('config', 'G-MP04SPYHH6');
+      gtag('config', 'G-MP04SPYHH6');
+    }
   </script>
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    if (typeof fbq === 'function') {
+      fbq('init', '989161047143598');
+      fbq('track', 'PageView');
+    }
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=989161047143598&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -88,7 +107,7 @@
         o semplicemente lasciarti sorprendere.<br>
         Ecco cosa ti aspetta.
       </p>
-      <p class="activity-program-notice">Il programma completo disponibile tra qualche giorno.</p>
+      <a class="activity-program-notice" href="assets/pdf/Programma_Completo_Finale_Canavese_Comics_2026_docx_Documenti_Google.pdf" target="_blank" rel="noopener noreferrer">Scarica il programma completo</a>
     </section>
 
     <section class="activity-grid" aria-label="Attività principali">

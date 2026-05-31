@@ -7,10 +7,29 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    if (typeof gtag === 'function') {
+      gtag('js', new Date());
 
-    gtag('config', 'G-MP04SPYHH6');
+      gtag('config', 'G-MP04SPYHH6');
+    }
   </script>
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    if (typeof fbq === 'function') {
+      fbq('init', '989161047143598');
+      fbq('track', 'PageView');
+    }
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=989161047143598&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -86,7 +105,7 @@
         "@id": "https://www.canavesecomics.com/biglietti.html#webpage",
         "url": "https://www.canavesecomics.com/biglietti.html",
         "name": "Biglietti | Canavese Comics",
-        "description": "Biglietti Canavese Comics 2026: biglietto online giornaliero a 7 euro più 1,68 euro di fee Eventbrite, totale online 8,68 euro; biglietto in loco a 8 euro fino ad esaurimento [...]
+        "description": "Biglietti Canavese Comics 2026: biglietto online giornaliero a 7 euro più 1,68 euro di fee Eventbrite, totale online 8,68 euro; biglietto in loco a 8 euro fino ad esaurimento scorte.",
         "isPartOf": {
           "@id": "https://www.canavesecomics.com/#website"
         },
@@ -123,7 +142,7 @@
         "@type": "Event",
         "@id": "https://www.canavesecomics.com/#event",
         "name": "Canavese Comics 2026",
-        "description": "Canavese Comics 2026 è un evento di due giorni a Tavagnasco dedicato a fumetti, cosplay, giochi, incontri, laboratori e cultura pop. Prezzi biglietti: online 7 euro più [...]
+        "description": "Canavese Comics 2026 è un evento di due giorni a Tavagnasco dedicato a fumetti, cosplay, giochi, incontri, laboratori e cultura pop. Prezzi biglietti: online 7 euro più 1,68 euro di fee Eventbrite, totale online 8,68 euro; in loco 8 euro fino ad esaurimento scorte.",
         "startDate": "2026-06-06",
         "endDate": "2026-06-07",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
@@ -519,7 +538,26 @@
   <script>
     var exampleCallback = function() {
         console.log('Order complete!');
+
+        if (typeof gtag === 'function') {
+          gtag('event', 'purchase', {
+            currency: 'EUR'
+          });
+        }
+
+        if (typeof fbq === 'function') {
+          fbq('track', 'Purchase', {
+            currency: 'EUR'
+          });
+        }
     };
+
+    if (typeof fbq === 'function') {
+      fbq('track', 'ViewContent', {
+        content_name: 'Biglietti Canavese Comics 2026',
+        content_category: 'Ticket'
+      });
+    }
 
     (function () {
       var countdown = document.querySelector('.tickets-countdown');
