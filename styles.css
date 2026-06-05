@@ -1311,6 +1311,14 @@ header {
   font-weight: 900;
 }
 
+.parking-map-link {
+  display: inline-flex;
+  margin-top: 0.55rem;
+  color: #5b3b8a;
+  font-size: clamp(0.96rem, 1.4vw, 1.08rem);
+  font-weight: 900;
+}
+
 .arrival-copy .location-map-button {
   margin-top: 0.5rem;
   align-self: flex-start;
@@ -1338,6 +1346,15 @@ header {
   border: 2px solid rgba(3, 3, 3, 0.88);
   border-radius: 8px;
   background: #fff;
+}
+
+.arrival-map h3 {
+  margin: 0.25rem 0 -0.25rem;
+  color: #2d5668;
+  font-size: clamp(1.08rem, 1.8vw, 1.35rem);
+  line-height: 1.1;
+  font-weight: 900;
+  text-align: center;
 }
 
 .arrival-pdf-preview {
