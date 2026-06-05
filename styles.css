@@ -1340,6 +1340,17 @@ header {
   background: #fff;
 }
 
+.arrival-pdf-preview {
+  display: block;
+  width: 100%;
+  height: min(78vh, 760px);
+  min-height: 520px;
+  box-sizing: border-box;
+  border: 2px solid rgba(3, 3, 3, 0.88);
+  border-radius: 8px;
+  background: #fff;
+}
+
 .arrival-downloads {
   display: flex;
   flex-wrap: wrap;
@@ -1386,6 +1397,11 @@ header {
     max-height: min(68vh, 620px);
     margin: 0 auto;
   }
+
+  .arrival-pdf-preview {
+    height: min(72vh, 680px);
+    min-height: 460px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1395,6 +1411,11 @@ header {
 
   .arrival-map img {
     max-height: min(62vh, 520px);
+  }
+
+  .arrival-pdf-preview {
+    height: 68vh;
+    min-height: 380px;
   }
 }
 
