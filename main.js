@@ -201,9 +201,9 @@ shineCtaLinks.forEach((link) => {
 });
 
 // Google Maps: load iframe only after user interaction
-const mapButton = document.querySelector(".location-map-button");
+const mapButtons = document.querySelectorAll(".location-map-button");
 
-if (mapButton) {
+mapButtons.forEach((mapButton) => {
   mapButton.addEventListener("click", () => {
     const mapSrc = mapButton.getAttribute("data-map-src");
     const mapContainer = mapButton.nextElementSibling;
@@ -249,7 +249,7 @@ if (mapButton) {
       );
     });
   });
-}
+});
 
 // Tracking
 (() => {
