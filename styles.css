@@ -2143,6 +2143,8 @@ body.page-about .scroll-progress__bar {
 }
 
 .helper-card img {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
@@ -2152,7 +2154,6 @@ body.page-about .scroll-progress__bar {
 }
 
 .helper-card:first-child img {
-  transform: scale(1.08);
   object-position: center 42%;
 }
 
