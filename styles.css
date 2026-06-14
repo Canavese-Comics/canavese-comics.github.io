@@ -2151,6 +2151,11 @@ body.page-about .scroll-progress__bar {
   background: #D3F2F6;
 }
 
+.helper-card:first-child img {
+  transform: scale(1.08);
+  object-position: center 42%;
+}
+
 .helper-card span {
   position: relative;
   z-index: 1;
