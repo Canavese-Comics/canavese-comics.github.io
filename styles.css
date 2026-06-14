@@ -2111,15 +2111,15 @@ body.page-about .scroll-progress__bar {
 .helpers-list {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 22px;
 }
 
 .helper-card {
   position: relative;
   display: grid;
   place-items: center;
-  width: 165px;
-  height: 145px;
+  width: 210px;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   border-radius: 4px;
   background:
@@ -2146,8 +2146,9 @@ body.page-about .scroll-progress__bar {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
+  background: #D3F2F6;
 }
 
 .helper-card span {
@@ -2304,8 +2305,8 @@ body.page-about .footer-legal {
   }
 
   .helper-card {
-    width: 76px;
-    height: 70px;
+    width: min(28vw, 116px);
+    height: auto;
   }
 
   .helper-card span {
